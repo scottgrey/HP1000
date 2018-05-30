@@ -143,7 +143,7 @@ restarted after a 60 second pause. This applies to errors other than the network
 access one discussed here.
 
 # Installation instructions
-Please consider the information in the 're-requisites' section.
+Please consider the information in the 'Pre-requisites' section.
 1) run the installer:
 
 	sudo cd <path to weewx directory>
