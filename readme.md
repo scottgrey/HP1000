@@ -1,4 +1,5 @@
 # HP1000 - a driver for HP1000 and clones including WS1001 and XC0422
+
 Copyright 2017 Susan Mackay
 
 ## Introduction
@@ -148,42 +149,33 @@ systemctl to control the computer. This can be done by editing/adding the approp
     Restart=always
     RestartSec=60
 
-**Note**: there can be multiple 'Requires' and 'After' lines in the control 
+**Note**: there can be multiple 'Requires' and 'After' lines in the control
 file.
 
-The last two lines ensure that any crash of weeWx will cause the program to be 
-restarted after a 60 second pause. This applies to errors other than the network 
+The last two lines ensure that any crash of weeWx will cause the program to be
+restarted after a 60 second pause. This applies to errors other than the network
 access one discussed here.
 
 ## Installation instructions
 
-Please consider the information in the 'Pre-requisites' section.
+1. Please consider the information in the 'Pre-requisites' section and then download the extension.
 
-1) run the installer:
+    wget -O HP1000.zip https://github.com/scottgrey/HP1000/archive/master.zip
 
-    sudo cd <path to weewx directory>
-    sudo python ./bin/wee_extension --install <path to file>/HP1000
-    sudo python ./bin/wee_config --reconfigure
+2. run the installer:
 
-The last command will (eventually) list all of the known drivers. Select the
-number next to 'HP1000'.
+    sudo wee_extension --install HP1000.zip
 
-2) Start weeWx:
+3. select and configure the driver:
 
-    sudo /etc/init.d/weewx enable
-    sudo /etc/init.d/weewx start
+    sudo wee_config --reconfigure
 
-or
+4. Start weeWx:
 
     sudo systemctl daemon-reload
     sudo systemctl weewx enable
     sudo systemctl weewx start
 
-3) To restart weewx:
-
-    sudo /etc/init.d/weewx stop
-    sudo /etc/init.d/weewx start
-
-or
+5. To restart weewx:
 
     sudo systemctl restart weewx
