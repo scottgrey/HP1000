@@ -159,7 +159,7 @@ access one discussed here.
 
 Please consider the information in the 'Pre-requisites' section.
 
-1. run the installer:
+1) run the installer:
     sudo cd <path to weewx directory>
     sudo python ./bin/wee_extension --install <path to file>/HP1000
     sudo python ./bin/wee_config --reconfigure
@@ -167,16 +167,18 @@ Please consider the information in the 'Pre-requisites' section.
 The last command will (eventually) list all of the known drivers. Select the
 number next to 'HP1000'.
 
-1. Start weeWx:
+2) Start weeWx:
+
     sudo /etc/init.d/weewx enable
     sudo /etc/init.d/weewx start
 
 or
+
     sudo systemctl daemon-reload
     sudo systemctl weewx enable
     sudo systemctl weewx start
 
-1. To restart weewx:
+3) To restart weewx:
 
     sudo /etc/init.d/weewx stop
     sudo /etc/init.d/weewx start
