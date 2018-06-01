@@ -158,24 +158,22 @@ access one discussed here.
 
 ## Installation instructions
 
-1. Please consider the information in the 'Pre-requisites' section and then download the extension.
+### Download
+
+Please consider the information in the 'Pre-requisites' section and then download the extension.
 
     wget -O HP1000.zip https://github.com/scottgrey/HP1000/archive/master.zip
 
-2. run the installer:
+### Run the installer
 
     sudo wee_extension --install HP1000.zip
 
-3. select and configure the driver:
+### Select and configure the driver
 
     sudo wee_config --reconfigure
 
-4. Start weeWx:
+### Start weeWx
 
     sudo systemctl daemon-reload
     sudo systemctl weewx enable
     sudo systemctl weewx start
-
-5. To restart weewx:
-
-    sudo systemctl restart weewx
